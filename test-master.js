@@ -96,8 +96,8 @@
         if(this.from_yay !== undefined){
           in_foo = this.from_yay;
         }
-        assert.equal(in_foo, "???");
-        assert.equal(this.from_yay, "???");
+        assert.equal(in_foo, "i'm in foo");
+        assert.equal(this.from_yay, undefined);
       }
       yay();
       foo();
@@ -117,11 +117,11 @@
       function yay(){
         var peanuts = "roasted";
   
-        assert.equal(peanuts, "???");
+        assert.equal(peanuts, "roasted");
       }
       yay();
   
-      assert.equal(peanuts, "???");
+      assert.equal(peanuts, "300");
     });
 
 
@@ -143,11 +143,11 @@
       }
   
       yay();
-      assert.equal(this.counter, "???");
+      assert.equal(this.counter, undefined);
       yay();
-      assert.equal(this.counter, "???");
+      assert.equal(this.counter, undefined);
       yay();
-      assert.equal(this.counter, "???");
+      assert.equal(this.counter, undefined);
     });
   
 
@@ -164,7 +164,7 @@
         return im_outside + im_inside;
       }
   
-      assert.equal(yay(), "???");
+      assert.equal(yay(), "alphaomega");
     });
 
 
@@ -182,9 +182,9 @@
       }
   
       yay();
-      assert.equal(im_outside, "???");
+      assert.equal(im_outside, "14");
       yay();
-      assert.equal(im_outside, "???");
+      assert.equal(im_outside, "15");
     });
   
 
