@@ -5,37 +5,62 @@
       var some_number = 484;
   
       //                     ┌ Change this to what it should be
-      assert.equal( value, '???');
-      //                           ┌ Change this to what it should be
-      assert.equal( some_number, "???");
+      assert.equal( value, "hello tests");
+      //.     testvalue      expecteed output 
+      //                          ┌ Change this to what it should be
+      assert.equal( some_number, 484);
     });
+
+
+
+
+
+
   
     QUnit.test("Functions can access/modify variables in parent scope.", function(assert){
-      var outside_the_function = null;
+      var outside_the_function = null; //"global or outer scope" ==> available everywhere
 
       function yay(){
-        var inside_the_function = "can you see me?";
-        outside_the_function = inside_the_function; 
+        var inside_the_function = "can you see me?"; //fucntion scoped
+        outside_the_function = inside_the_function; //"outside the function" = 'can you see me'
       }
   
       yay();
   
-      assert.equal(outside_the_function, "???");
+      assert.equal(outside_the_function, "can you see me?");
     });
+
+
+
+
+
+
+
+
   
     QUnit.test("Function Parameters become scoped to the function.", function(assert){
   
       function yay(param){
-        assert.equal(param, "???");
+        assert.equal(param, "a fine kettle of fish");
       }
   
       yay("a fine kettle of fish");
     });
+
+
+
+
+
+
+
+
+
+
   
     QUnit.test("A functions local scope is not available in an outer scope.", function(assert){
       function yay(){
         var kix = "kid tested mother approved";
-        assert.equal(kix, "???");
+        assert.equal(kix, "kid tested mother approved");
       }
       yay();
       
@@ -49,8 +74,17 @@
       } else {
         has_kix = "i prefer cheerios";
       }
-      assert.equal(has_kix, "???");
+      assert.equal(has_kix, "i prefer cheerios");
     });
+
+
+
+
+
+
+
+
+
   
     QUnit.test("Functions don't have access to eachothers scope", function(assert){
       function yay(){
@@ -69,6 +103,13 @@
       foo();
     });
   
+
+
+
+
+
+
+
     QUnit.test("Inner scope variables override outter scope variables.", function(assert){
   
       var peanuts = 300;
@@ -82,6 +123,15 @@
   
       assert.equal(peanuts, "???");
     });
+
+
+
+
+
+
+
+
+
   
     QUnit.test("Variables created with var in a funtion are re-created each time", function(assert){
       function yay(){
@@ -100,6 +150,13 @@
       assert.equal(this.counter, "???");
     });
   
+
+
+
+
+
+
+
     QUnit.test("Inner scope can access outer scope", function(assert){
       var im_outside = "alpha";
       function yay(){
@@ -109,6 +166,14 @@
   
       assert.equal(yay(), "???");
     });
+
+
+
+
+
+
+
+
   
     QUnit.test("Functions retain outer scope references between calls.", function(assert){
       var im_outside = 13;
@@ -122,6 +187,15 @@
       assert.equal(im_outside, "???");
     });
   
+
+
+
+
+
+
+
+
+
     QUnit.test("We can do goofy stuff with outer scope", function(assert){
   
       var hello = "greg";
@@ -138,6 +212,13 @@
       yay();
       assert.equal(name, "???");
     });
+
+
+
+
+
+
+
   
     QUnit.test("We can pass functions to other functions and then run them.", function(assert){
       var im_outter = 10;
@@ -152,6 +233,14 @@
       assert.equal(im_outter, "???");
   
     });
+
+
+
+
+
+
+
+
   
     QUnit.test("We can get crazy with returns.", function(assert){
       function yay(){
