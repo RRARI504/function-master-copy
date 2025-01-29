@@ -3,7 +3,16 @@
 //////////////////////////////////////////////////////////////////////
 
 function objectValues(object) {
-    // code
+    let output = [];
+}
+
+var objectOne = {
+    a: "one", 
+    b:  "two", 
+    ponies: "crayons", 
+    something: {}, 
+    dingle: "dangle"
+
 } 
 
 //////////////////////////////////////////////////////////////////////
