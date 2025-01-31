@@ -3,15 +3,15 @@
 //////////////////////////////////////////////////////////////////////
 
 function objectValues(object) {
-    let output = [];
-}
+    let output = []; //empty array to store values 
 
-var objectOne = {
-    a: "one", 
-    b:  "two", 
-    ponies: "crayons", 
-    something: {}, 
-    dingle: "dangle"
+    for(let key in object){ //for loop that iterates over every object in key 
+        output.push(object[key]) // pushing the output of each key in the objects to the output array
+
+    }
+
+    return output; //return the array of outputs
+
 
 } 
 
@@ -20,16 +20,39 @@ var objectOne = {
 //////////////////////////////////////////////////////////////////////
 
 function keysToString(object) {
+    let output = ''; //empty string to store values 
+
+    for(let key in object){ //for loop that iterates over each key in the object
+        output += key + " " //concatenating the keys with an empty space 
+    }
+
+    return output.trim(); //returns the object with the keys and .trim() takes away the trailing space 
 
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 3 - Values to String /////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+//I: The input is an object 
+//O: The string values of the object all with a space between them 
+//C
+//E
 function valuesToString(object) {
+    let output = '';
+
+    for (let key in object){ //for loop that iterates over each key in the object 
+    if (typeof object[key] === "string"){ //if the value in the object is a string add it to the output string 
+        output += object[key] + ' ';  // and concatenate the string with a space 
+       }
+
+    
+
+}
+ return output.trim(); //return the output string with a spce 
     
 }
+    
+
 
 //////////////////////////////////////////////////////////////////////
 // Function 4 - Array or Object //////////////////////////////////////
@@ -37,6 +60,13 @@ function valuesToString(object) {
 
 function arrayOrObject(collection) {
     
+    if(Array.isArray(collection)){
+        return "array";
+    } else if( typeof collection === "object" && collection !== null){
+        return "object";
+
+    }
+
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -44,6 +74,7 @@ function arrayOrObject(collection) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeWord(string) {
+
     
 }
 
