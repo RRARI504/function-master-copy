@@ -84,7 +84,15 @@ function capitalizeWord(string) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeAllWords(string) {
+    var strOfWords = string.split(" ") //a variable that takes the string of words and splits them based on the spaces
+    var capWords = []; //empty array to hold the words 
+
+    for(i = 0; strOfWords.length; i++){ //for loop that iterates over the string of words and 
+
+    }
     
+    
+
 }
 
 //////////////////////////////////////////////////////////////////////
