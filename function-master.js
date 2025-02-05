@@ -84,11 +84,12 @@ function capitalizeWord(string) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeAllWords(string) {
-    var strOfWords = string.split(" ") //a variable that takes the string of words and splits them based on the spaces
+
+    var strOfWords = string.split(" "); //a variable that takes the string of words and splits them based on the spaces
     var capWords = []; //empty array to hold the new capitalized words 
 
-    for(i = 0; strOfWords.length; i++){ //for loop that iterates over the string of words  
-        var word = strOfWords[i] //variable that grabs each word at index i and 
+    for(var i = 0; i < strOfWords.length; i++){ //for loop that iterates over the string of words  
+        var word = strOfWords[i]; //variable that grabs each word at index i and 
         var capWord = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
         //takes each word at the first character, capitalizes it then concatenates the rest of the word to lower case 
 
@@ -96,7 +97,7 @@ function capitalizeAllWords(string) {
 
 
     }
-        return capWords.join(' '); //join the words together in the array to a single string with spaces in between
+        return capWords.join(" "); //join the words together in the array to a single string with spaces in between
     
     
 
@@ -105,9 +106,12 @@ function capitalizeAllWords(string) {
 //////////////////////////////////////////////////////////////////////
 // Function 7 - Welcome Message //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+//I: The input is an object 
+//O: the output should be the name property of the object with welcome infront of it
+//C
+//E
 function welcomeMessage(object) {
-
+    return 'Welcome ' + object.name + '!';
 
 }
 
