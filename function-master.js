@@ -111,7 +111,7 @@ function capitalizeAllWords(string) {
 //C
 //E
 function welcomeMessage(object) {
-    return 'Welcome ' + object.name + '!';
+    return `Welcome, ${object.name}!`
 
 }
 
