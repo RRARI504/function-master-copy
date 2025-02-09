@@ -111,7 +111,14 @@ function capitalizeAllWords(string) {
 //C
 //E
 function welcomeMessage(object) {
-    return `Welcome, ${object.name}!`
+
+    var capName = object.name.charAt(0).toUpperCase() + object.name.slice(1)
+    //declare a variable named cap name and access the object name using dot notation
+    //and grab the first charachter and upper case it and concatenated the object name
+    //using dot name and slice method to lower case the rest after the first character. 
+    return `Welcome ${capName}!`;
+
+
 
 }
 
@@ -119,15 +126,32 @@ function welcomeMessage(object) {
 // Function 8 - Profile Info /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+//I: object 
+//O: The output should be the name and species keys and return "name" is a "species"
+//C:
+//E:
+
 function profileInfo(object) {
+
+    var name  =  object.name.charAt(0).toUpperCase() + object.name.slice(1);
+    var species  =  object.species.charAt(0).toUpperCase() + object.species.slice(1);
+    
+    return `${name} is a ${species}`
 
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 9 - Maybe Noises /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//I: Object
+//O: the output should be 
+//C:
+//E:
 
 function maybeNoises(object) {
+    if(key in object.noises){
+
+    }
 
 }
 
