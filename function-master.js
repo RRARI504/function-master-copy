@@ -198,7 +198,7 @@ function addFriend (name, object) {
 //O: return true if the name is a friend of the object and false otherwise
 //C:
 //E:
-
+//we need to check if the friends array is in the object then if it includes the name 
 function isFriend(name, object) {
     
     if(object.friends && object.friends.includes(name)){
@@ -214,8 +214,17 @@ function isFriend(name, object) {
 //////////////////////////////////////////////////////////////////////
 // Function 13 - Non-Friends /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+//should return an array so we need a container
+//should push all non friends names to the array 
 function nonFriends(name, array) {
+    const nonFriend = [];
+
+    for(var i = 0; i < array.length; i++){
+        let people = array[i]
+    }
+
+    
+
 
 }
 
