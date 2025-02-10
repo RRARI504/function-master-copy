@@ -144,39 +144,63 @@ function profileInfo(object) {
 // Function 9 - Maybe Noises /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 //I: Object
-//O: the output should be 
+//O: the output should be a value based off if the object has a noises array. 
+//If it does return the noises array as a string seperated with a space and if not it should return
+//there are no noises
 //C:
 //E:
 
 function maybeNoises(object) {
-    if(key in object.noises){
-
+    if(Array.isArray(object.noises) && object.noises.length > 0){
+        return object.noises.join(' ');
+    } else {
+        return 'there are no noises'
     }
 
-}
+};
 
 //////////////////////////////////////////////////////////////////////
 // Function 10 - Has Words ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//I: a string of words and a word
+//O: the output should return the boolean value true if the word is in the string of words
+// and false other wise. 
+//C:
+//E:
 
 function hasWord(string, word) {
+    return string.split(" ").includes(word) 
+    //split the string into an array of words using the method .split and 
+    //search for the word in the now array of words using method .includes 
 
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 11 - Add Friend //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//I: the inputs are a name and an object
+//O: the output should be the object with the name added to it. 
+//C:
+//E:
 
 function addFriend (name, object) {
+    objName = []; //empty array to push values to 
+    object.friends.push(name); //push the name parameter to the objects friends array 
+
+    return object; //return the object 
 
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 12 - Is Friend ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//I: a name and a object 
+//O: return true if the name is a friend of the object and false otherwise
+//C:
+//E:
 
 function isFriend(name, object) {
-
+   
 }
 
 //////////////////////////////////////////////////////////////////////
