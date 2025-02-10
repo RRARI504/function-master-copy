@@ -200,7 +200,15 @@ function addFriend (name, object) {
 //E:
 
 function isFriend(name, object) {
-   
+    
+    if(object.friends && object.friends.includes(name)){
+        return true;
+
+    } else{
+
+        return false;
+    }
+
 }
 
 //////////////////////////////////////////////////////////////////////
