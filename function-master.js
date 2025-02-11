@@ -221,10 +221,14 @@ function nonFriends(name, array) {
 
     for(var i = 0; i < array.length; i++){
         let people = array[i]
+    
+    if(people.name !== name && !people.friends.includes(name)){
+        nonFriend.push(people.name)
+
     }
 
-    
-
+} 
+return nonFriend; 
 
 }
 
@@ -232,16 +236,28 @@ function nonFriends(name, array) {
 // Function 14 - Update Object ///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+//I: and object a key and a value
+//O: should be a string value that represents an updated property of the key with a new value 
+//C: 
+//E:
 function updateObject(object, key, value) {
+    object[key] = value; //updated the key value pair with bracket notation and made it equal to our new value
+    return object; //return the new object 
+
+
 
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 15 - Remove Properties ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+//I: an array and object 
+//O: should be an updated object with any properties that were already listed in the array removed from the object 
+//C:
+//E:
+//: Im needing to access the object, delete properties 
 function removeProperties(object, array) {
-
+    
 }
 
 //////////////////////////////////////////////////////////////////////
