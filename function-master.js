@@ -257,17 +257,37 @@ function updateObject(object, key, value) {
 //E:
 //: Im needing to access the object, delete properties
 function removeProperties(object, array) {
-    
-    
+
+    for(var key in object){ //for in loop iterates over the objects 
+
+        if(array.includes(key)){//conditinal statement says if the array includes the keys from the object 
+            delete object[key]; //delets the key from object
+
+        }
+    }
+
+    return object; //returns modified object
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 16 - Dedup ///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//I: an array
+//O: the output should be a new array with all duplicates removed
+//so we need to access the values in the array and 
 
 function dedup(array) {
+    
+    let s = new Set(array); //set the variable s and mut it equal to the Set() method which 
+    //is a collection of values in the object where the value in the set may only occur once.
+    //So this creates a set from the array and automatically removes duplicates.
+    let a1 = [...s] //declaring the variable a1 and letting it be equal to an array 
+    //[...s] means copy to an array 
 
+    return a1;//returning the new array 
 }
+
+
 
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
