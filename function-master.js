@@ -255,8 +255,9 @@ function updateObject(object, key, value) {
 //O: should be an updated object with any properties that were already listed in the array removed from the object 
 //C:
 //E:
-//: Im needing to access the object, delete properties 
+//: Im needing to access the object, delete properties
 function removeProperties(object, array) {
+    
     
 }
 
